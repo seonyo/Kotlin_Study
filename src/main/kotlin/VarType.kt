@@ -19,5 +19,7 @@ fun main(){
     val myVal : Int = 100
     //myVal = 200 ---오류
 
+    var a : Int = "100".toInt() //String을 int로 형변환
+    var b : Double = "100.123".toDouble() //Stirng을 Double로 형변환
 
 }
