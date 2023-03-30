@@ -22,4 +22,12 @@ fun main(){
     var a : Int = "100".toInt() //String을 int로 형변환
     var b : Double = "100.123".toDouble() //Stirng을 Double로 형변환
 
+    //코틀린은 기본적으로 변수에 null값을 넣지 못함. 변수를 선언할 때 데이터 형식 뒤에 ?를 붙어야 null 대입 가능
+    //var notNull : Int = null  ---- 애러 발생
+    var okNull : Int? = null
+
+    //변수가 null값이 절대 아니라고 표시해야 하는 경우는 !!로 나타냄
+    var ary = ArrayList<Int> (1) //1개짜리 배열 리스트 추가
+    ary!!.add(100) //100이라는 값을 추가
+
 }
