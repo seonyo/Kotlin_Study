@@ -10,4 +10,12 @@ fun main(){
     println(one[2])
     println(one[3])
 
+    var two = Array<IntArray> (3, {IntArray(4)})
+    two[0][0]=100
+    two[2][3]=200
+
+    println(two[0][0])
+    println(two[2][3])
+
+
 }
