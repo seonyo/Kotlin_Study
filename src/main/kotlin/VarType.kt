@@ -11,4 +11,13 @@ fun main(){
     println(var4)
     println(var5)
 
+    //var은 변수타입, val은 상수타입이다
+
+    var myVar : Int = 100
+    myVar = 200 //정상
+
+    val myVal : Int = 100
+    //myVal = 200 ---오류
+
+
 }
