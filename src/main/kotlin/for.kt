@@ -18,4 +18,6 @@ fun main(){
     println()
     for (i in 1 until leng)  //until을 사용하면 맨 마지막 값은 포함하지 않는다
         print("$i |")
+
+    
 }
