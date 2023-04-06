@@ -7,6 +7,10 @@ fun main(){
     var myCar3 : Car = Car("초록", 0)
 
 
+    var auto : Automobile = Automobile()
+    auto.upSpeed(250)
+    println("승용차의 속도는 " + auto.speed+"km입니다.")
+
     println("생성된 차의 대수(정적 필드) ==> " + Car.carCount)
     println("생성된 차의 대수(정적 메소드 ==>" + Car.currentCarCount())
     println("차의 최고 제한 속도 ==>" + Car.MAXSPEED)
@@ -15,7 +19,7 @@ fun main(){
     println("3의 5제곱 ==>" + Math.pow(3.0, 5.0))
 }
 
-class Car{
+open class Car{
     var color : String =""
     var speed : Int = 0
 
@@ -39,7 +43,7 @@ class Car{
     constructor(){ //기본생성자
 
     }
-    fun upSpeed (value : Int){  //메소드, int value와 같은 뜻 이렇게 쓰는 것. 매개변수는 자료형만 쓰는 것 var 생략
+    open fun upSpeed (value : Int){  //메소드, int value와 같은 뜻 이렇게 쓰는 것. 매개변수는 자료형만 쓰는 것 var 생략
         if (speed+value >= 200)
             speed = 200
         else
@@ -54,3 +58,21 @@ class Car{
     }
 
 }
+
+class Automobile : Car{ //extends Car 한 것과 같음
+    var seatNum : Int = 0
+
+    constructor(){
+
+    }
+    fun countSeatNum() : Int {
+        return seatNum
+    }
+    override fun upSpeed(value: Int){
+        if(speed+value >= 300)
+            speed = 300
+        else
+            speed = speed+value
+    }
+}
+
